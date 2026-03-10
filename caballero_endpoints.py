@@ -13,8 +13,8 @@ def listaCaballeros(skip: int = 0, limit: int = 10):
 
 @router.post("/add_caballero")
 def addCaballero(caballero: Caballero):
-    for caballero in lista_caballeros:
-        if caballero.id == caballero.id:
+    for caballero_existente in lista_caballeros:
+        if caballero_existente.id == caballero.id:
             raise HTTPException(status_code=400, detail="ID ya existe")
     lista_caballeros.append(caballero)
     return {"message": "Caballero agregado", "caballero": caballero}
