@@ -1,0 +1,54 @@
+from caballero_model import Caballero
+from enum_material import Material
+
+lista_caballeros = [
+    Caballero(
+        id=1, 
+        name="Kael", 
+        material=Material.BRONCE, 
+        attack=150, 
+        constelation="Pegaso"
+    ),
+    Caballero(
+        id=2, 
+        name="Lyra", 
+        material=Material.PLATA, 
+        attack=320, 
+        constelation="Águila"
+    ),
+    Caballero(
+        id=3, 
+        name="Ignis", 
+        material=Material.ORO, 
+        attack=850, 
+        constelation="Leo"
+    ),
+    Caballero(
+        id=4, 
+        name="Dante", 
+        material=Material.BRONCE, 
+        attack=180, 
+        constelation="Fénix"
+    ),
+    Caballero(
+        id=5, 
+        name="Alden", 
+        material=Material.ORO, 
+        attack=900, 
+        constelation="Virgo"
+    ),
+    Caballero(
+        id=6, 
+        name="Thorne", 
+        material=Material.PLATA, 
+        attack=400, 
+        constelation="Escorpión"
+    ),
+    Caballero(
+        id=7, 
+        name="Elara", 
+        material=Material.BRONCE, 
+        attack=200, 
+        constelation="Sagitario"
+    )
+]
