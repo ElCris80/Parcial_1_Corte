@@ -50,5 +50,13 @@ lista_caballeros = [
         material=Material.BRONCE, 
         attack=200, 
         constelation="Sagitario"
+    ),
+    Caballero(
+        id=8,
+        name="Orion",
+        material=Material.ORO,
+        attack=950,
+        constelation="Tauro"
     )
+
 ]
