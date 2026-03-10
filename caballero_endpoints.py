@@ -8,8 +8,8 @@ from enum_material import Material
 router = APIRouter(prefix="/caballero", tags=["caballero"])
 
 @router.get("/lista_caballeros")
-def listaCaballeros():
-    return lista_caballeros
+def listaCaballeros(skip: int = 0, limit: int = 10):
+    return lista_caballeros[skip:skip + limit]
 
 @router.get("/show_caballero/{id}")
 def showCaballero(id: int):
