@@ -11,6 +11,14 @@ router = APIRouter(prefix="/caballero", tags=["caballero"])
 def listaCaballeros(skip: int = 0, limit: int = 10):
     return lista_caballeros[skip:skip + limit]
 
+@router.post("/add_caballero")
+def addCaballero(caballero: Caballero):
+    for caballero in lista_caballeros:
+        if caballero.id == caballero.id:
+            raise HTTPException(status_code=400, detail="ID ya existe")
+    lista_caballeros.append(caballero)
+    return {"message": "Caballero agregado", "caballero": caballero}
+
 @router.get("/show_caballero/{id}")
 def showCaballero(id: int):
     for caballero in lista_caballeros:
